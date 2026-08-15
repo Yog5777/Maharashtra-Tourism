@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Maharashtra Tourism</title>
+
+    <!-- FontAwesome Icons for Professional Look -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- WOWSlider HEAD section -->
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" media="screen" />
+    <style type="text/css">a#vlb{display:none}</style>
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+
+    <style>
+        /* Base Reset */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Top Header */
+        header {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            color: #1a4d2e;
+            font-size: 28px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* Modern Navigation Bar */
+        .menu-bar {
+            background: linear-gradient(90deg, #1a4d2e 0%, #4f772d 100%);
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .menu-bar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu-bar ul li {
+            position: relative;
+        }
+
+        .menu-bar ul li a {
+            display: block;
+            color: white;
+            padding: 15px 22px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .menu-bar ul li:hover > a, .menu-bar ul li.active > a {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-bottom: 3px solid #ffb703;
+        }
+
+        /* Modern Dropdown Menu for Districts */
+        .sub-menu-1 {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #1a4d2e;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+        }
+
+        .menu-bar ul li:hover .sub-menu-1 {
+            display: block;
+        }
+
+        .sub-menu-1 ul {
+            display: block;
+        }
+
+        .sub-menu-1 ul li a {
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+
+        .sub-menu-1 ul li a:hover {
+            background-color: #4f772d;
+            padding-left: 25px;
+        }
+
+        /* Container Card Layout */
+        .main-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            padding: 25px;
+            overflow: hidden;
+        }
+
+        /* Description Box */
+        .about-text {
+            background: #f9fbf9;
+            border-left: 5px solid #1a4d2e;
+            padding: 20px 25px;
+            margin-top: 25px;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #444;
+            text-align: justify;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1a4d2e;
+            color: white;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Maharashtra Tourism</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="menu-bar">
+        <ul>
+            <li class="active"><a href="Home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+            <li><a href="About.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="Gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li>
+                <a href="#"><i class="fas fa-map-marked-alt"></i> Select District <i class="fas fa-caret-down"></i></a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="Nagpur.html">Nagpur</a></li> 
+                        <li><a href="Thane.html">Thane</a></li> 
+                        <li><a href="Nashik.html">Nashik</a></li> 
+                        <li><a href="Amravati.html">Amravati</a></li>  
+                        <li><a href="Buldhana.html">Buldhana</a></li>
+                        <li><a href="Akola.html">Akola</a></li> 
+                        <li><a href="Dhule.html">Dhule</a></li> 
+                        <li><a href="Jalgon.html">Jalgaon</a></li> 
+                        <li><a href="Nanded.html">Nanded</a></li>    
+                        <li><a href="Chandrapur.html">Chandrapur</a></li>
+                        <li><a href="Pune.html">Pune</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="main-container">
+
+        <!-- WOWSlider BODY section -->
+        <div id="wowslider-container1">
+            <div class="ws_images">
+                <a href="#"><img src="data1/images/5.jpg" alt="Tadoba National Park" title="Tadoba Eco-Tourism" id="wows0"/>Tadoba Safari</a>
+                <a href="#"><img src="data1/images/6.jpg" alt="Chhatrapati Shivaji Maharaj Terminus" title="Mumbai Heritage" id="wows1"/>Mumbai Heritage</a>
+                <a href="#"><img src="data1/images/7.jpg" alt="Tadoba Forest" title="Chandrapur Forests" id="wows2"/>Chandrapur Wildlife</a>
+                <a href="#"><img src="data1/images/1553503651_fun_n_food_village.png.jpg" alt="Fun N Food Village" title="Fun N Food Village" id="wows3"/>Water Park & Fun</a>
+                <a href="#"><img src="data1/images/1553507761_dragon_palace_buddhist_temple.png.jpg" alt="Dragon Palace Buddhist Temple" title="Dragon Palace Temple" id="wows4"/>Spiritual Tourism</a>
+                <a href="#"><img src="data1/images/1585116470_shutterstock_618681866.jpg.jpg.jpg" alt="Maharashtra Nature" title="Scenic Landscapes" id="wows5"/>Beautiful Landscapes</a>
+            </div>
+            
+            <div class="ws_bullets">
+                <div>
+                    <a href="#wows0" title="Tadoba Eco-Tourism"><img src="data1/tooltips/5.jpg" alt="Tadoba"/>1</a>
+                    <a href="#wows1" title="Mumbai Heritage"><img src="data1/tooltips/6.jpg" alt="Mumbai"/>2</a>
+                    <a href="#wows2" title="Chandrapur Wildlife"><img src="data1/tooltips/7.jpg" alt="Chandrapur"/>3</a>
+                    <a href="#wows3" title="Fun N Food Village"><img src="data1/tooltips/1553503651_fun_n_food_village.png.jpg" alt="Fun Park"/>4</a>
+                    <a href="#wows4" title="Dragon Palace Temple"><img src="data1/tooltips/1553507761_dragon_palace_buddhist_temple.png.jpg" alt="Temple"/>5</a>
+                    <a href="#wows5" title="Scenic Landscapes"><img src="data1/tooltips/1585116470_shutterstock_618681866.jpg.jpg.jpg" alt="Nature"/>6</a>
+                </div>
+            </div>
+            <div id="wowslider-shadow"></div>
+        </div>
+        <script type="text/javascript" src="engine1/script.js"></script>
+        <!-- End WOWSlider section -->
+
+        <!-- Description -->
+        <div class="about-text">
+            <p>
+                Maharashtra is in the process of developing an eco-tourism circuit connecting nearly 350 locations to a common grid for providing better facilities and development of popular destinations in the State. The Maharashtra Eco-tourism Board has already taken up the project, which will include Mumbai’s Sanjay Gandhi National Park. “Maharashtra is the best State for all types of tourism including forts, coastal tourism, forest safaris and spiritual tourism. Tourism is a plus point for the State to create employment opportunities for locals,” said the Eco-tourism Board.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Maharashtra Tourism Portal. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

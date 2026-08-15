@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akola - Maharashtra Tourism</title>
+    <!-- FontAwesome Library for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- Core Reset & Base Styles --- */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #f0f3f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- Theme Color Variables --- */
+        :root {
+            --primary-green: #1a4d2e;
+            --sidebar-hover: #12351f;
+            --bg-light: #ffffff;
+            --text-main: #333333;
+            --text-muted: #555555;
+            --border-color: #e2e8f0;
+        }
+
+        /* --- Top Main Header --- -->
+        header {
+            background-color: #ffffff;
+            padding: 25px 10px 15px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--primary-green);
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* --- Navigation Sub-Header --- */
+        .sub-header {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 12px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .sub-header h2 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-btn {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            position: absolute;
+            right: 30px;
+            transition: background 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* --- Main Layout Wrapper (Sidebar + Content Container) --- */
+        .main-layout {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            background: var(--bg-light);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            overflow: hidden;
+            min-height: 650px;
+        }
+
+        /* --- Left Sidebar Navigation --- */
+        .sidebar {
+            width: 280px;
+            background-color: var(--primary-green);
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        .sidebar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14.5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background 0.2s ease;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background-color: var(--sidebar-hover);
+        }
+
+        .sidebar a i {
+            width: 20px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        /* --- Right Content Area --- */
+        .content-area {
+            flex-grow: 1;
+            padding: 35px;
+            background-color: #ffffff;
+            overflow-y: auto;
+        }
+
+        /* Banner Image Box */
+        .banner-img-box {
+            width: 100%;
+            height: 350px;
+            background-color: #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .banner-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Content Text Blocks */
+        .content-section {
+            margin-bottom: 25px;
+        }
+
+        .content-section p {
+            font-size: 15px;
+            color: #444;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .main-layout {
+                flex-direction: column;
+                margin: 15px;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .sub-header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            .back-btn {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Main Header -->
+    <header>
+        <center><h1>WELCOME TO MAHARASHTRA TOURISM</h1></center>
+        <center><p>Explore the diverse beauty and culture of our state.</p></center>
+    </header>
+
+    <!-- Sub-Header / Navigation Bar -->
+    <div class="sub-header">
+        <h2><i class="fas fa-map-marker-alt"></i> Akola</h2>
+        <a href="Home.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to home</a>
+    </div>
+
+    <!-- Main Dual-Column Layout (Sidebar + Content) -->
+    <div class="main-layout">
+        
+        <!-- Left Sidebar Navigation Menu -->
+        <div class="sidebar">
+            <a href="Akola.html" class="active"><i class="fas fa-bars"></i> Overview</a>
+            <a href="Narnalafort.html"><i class="fas fa-landmark"></i> Narnala Fort</a>
+            <a href="Raj Rajeshwar Temple.html"><i class="fas fa-place-of-worship"></i> Raj Rajeshwar Temple</a>
+            <a href="Nehrupark.html"><i class="fas fa-tree"></i> Nehru Park</a>
+        </div>
+
+        <!-- Right Side Dynamic Content Area -->
+        <div class="content-area">
+            
+            <!-- City Banner Image -->
+            <div class="banner-img-box">
+                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80" alt="Akola City View">
+            </div>
+
+            <!-- Overview Text Section -->
+            <div class="content-section">
+                <p>Akola is a major historical, commercial, and agricultural city located in the Vidarbha region of the central Indian state of Maharashtra. Situated on the banks of the Morna River, it serves as the administrative headquarters of Akola District and plays a vital role as a cotton and pulse trading hub.</p>
+                <p>The city and its surrounding areas are rich in heritage, featuring prominent landmarks such as the hill fortress of Narnala, ancient shrines like the Raj Rajeshwar Temple, and peaceful recreational spots like Nehru Park, making it an engaging destination for travelers seeking culture and history.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

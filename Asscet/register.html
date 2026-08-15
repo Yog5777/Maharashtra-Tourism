@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Maharashtra Tourism</title>
+    <!-- FontAwesome Library for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- Core Reset & Modern Base --- */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #f0f3f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- Color Palette --- */
+        :root {
+            --primary-color: #1a4d2e; /* Dark Green */
+            --accent-color: #4f772d;  /* Light Green */
+            --bg-light: #ffffff;
+            --text-muted: #555;
+        }
+
+        /* --- Main Title Header --- */
+        header {
+            background-color: #ffffff;
+            padding: 25px 10px 15px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        /* --- Sub-Header / Navigation Bar --- */
+        .sub-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .sub-header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .back-btn {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: absolute;
+            right: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #ffb703;
+            color: var(--primary-color);
+        }
+
+        /* --- Registration Form Container --- */
+        .main-wrapper {
+            max-width: 500px;
+            margin: 40px auto;
+            background: var(--bg-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .input-with-icon {
+            position: relative;
+        }
+
+        .input-with-icon i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(79, 119, 45, 0.1);
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Footer Link inside Form */
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .form-footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-wrapper {
+                margin: 20px;
+                padding: 25px;
+            }
+            .sub-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .back-btn {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Title Header -->
+    <header>
+        <h1>WELCOME TO MAHARASHTRA TOURISM</h1>
+        <p>Explore the diverse beauty and culture of our state.</p>
+    </header>
+
+    <!-- Sub-Header / Title Bar -->
+    <div class="sub-header">
+        <h2><i class="fas fa-user-plus"></i> Create Account</h2>
+        <a href="Home.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <!-- Main Registration Container -->
+    <div class="main-wrapper">
+        <form action="#" method="POST">
+            
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fullname" placeholder="Enter your full name" required>
+                </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" placeholder="Enter your mobile number" required>
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-with-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Create a strong password" required>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn"><i class="fas fa-user-check"></i> Register</button>
+
+            <!-- Already have an account -->
+            <div class="form-footer">
+                <p>Already have an account? <a href="Login.html">Login here</a></p>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Rajeshwar Temple - Akola Tourism</title>
+    <!-- FontAwesome Library for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- Core Reset & Modern Base --- */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #f0f3f6;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* --- Color Palette --- */
+        :root {
+            --primary-color: #1a4d2e; /* Dark Green */
+            --accent-color: #4f772d;  /* Light Green */
+            --bg-light: #ffffff;
+            --text-muted: #555;
+        }
+
+        /* --- Main Title Header --- */
+        header {
+            background-color: #ffffff;
+            padding: 25px 10px 15px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        /* --- District Bar --- */
+        .sub-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .sub-header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .back-btn {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: absolute;
+            right: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #ffb703;
+            color: var(--primary-color);
+        }
+
+        /* --- Single Column Container Layout --- */
+        .main-wrapper {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: var(--bg-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .content-hero {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+            margin-bottom: 30px;
+        }
+
+        .content-hero img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Intro Box */
+        .intro-box {
+            background: #fafbfc;
+            padding: 22px 25px;
+            border-left: 5px solid var(--accent-color);
+            border-radius: 6px;
+            font-size: 16.5px;
+            color: #444;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .intro-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        /* Info Cards */
+        .info-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .info-card h3 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #f0f3f6;
+            padding-bottom: 8px;
+        }
+
+        .info-card h3 i {
+            color: var(--accent-color);
+        }
+
+        .info-card p {
+            color: #555;
+            font-size: 15.5px;
+            text-align: justify;
+        }
+
+        /* Map Container */
+        .map-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 380px;
+            border: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-wrapper {
+                margin: 15px;
+                padding: 20px;
+            }
+            .sub-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .back-btn {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Title -->
+    <header>
+        <h1>WELCOME TO MAHARASHTRA TOURISM</h1>
+        <p>Explore the diverse beauty and culture of our state.</p>
+    </header>
+
+    <!-- Sub-Header -->
+    <div class="sub-header">
+        <h2><i class="fas fa-place-of-worship"></i> Raj Rajeshwar Temple, Akola</h2>
+        <a href="Akola.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Akola</a>
+    </div>
+
+    <!-- Main Full-Width Wrapper (No Sidebar) -->
+    <div class="main-wrapper">
+        
+        <!-- Hero Image -->
+        <div class="content-hero">
+            <img src="../Asscet/Images/Raj Rajeshwar Temple, Akola.jpg" alt="Raj Rajeshwar Temple Akola">
+        </div>
+
+        <!-- Overview -->
+        <div class="intro-box">
+            <h3>Raj Rajeshwar Temple Akola</h3>
+            <p>
+                The Raj Rajeshwar Temple is a historic and deeply revered shrine dedicated to Lord Shiva, situated right in the heart of Akola city. It serves as one of the most prominent spiritual and cultural landmarks for local residents as well as devotees visiting from various parts of the state.
+            </p>
+        </div>
+
+        <!-- History -->
+        <div class="info-card">
+            <h3><i class="fas fa-history"></i> HISTORY & SIGNIFICANCE</h3>
+            <p>
+                The temple holds immense historical and religious importance in the Akola region. Known for its traditional architecture and peaceful ambience, it acts as a central hub for spiritual activities, drawing large numbers of people seeking peace and divine blessings throughout the year.
+            </p>
+        </div>
+
+        <!-- Getting There -->
+        <div class="info-card">
+            <h3><i class="fas fa-route"></i> GETTING THERE</h3>
+            <p>
+                Being located centrally within Akola city, the temple is easily accessible via local transport options such as auto-rickshaws, taxis, and city buses from any part of the town.
+            </p>
+        </div>
+
+        <!-- Things to Do -->
+        <div class="info-card">
+            <h3><i class="fas fa-hiking"></i> THINGS TO DO AND SEE IN AND AROUND</h3>
+            <p>
+                Apart from offering prayers and experiencing the divine atmosphere within the temple premises, visitors can explore nearby local markets, traditional eateries, and other central city attractions of Akola.
+            </p>
+        </div>
+
+        <!-- Special Festivals -->
+        <div class="info-card">
+            <h3><i class="fas fa-calendar-alt"></i> Major Festivals at the Temple</h3>
+            <p>
+                The temple experiences its peak vibrancy during the festival of Maha Shivaratri, when thousands of devotees flock to the premises to participate in special rituals, night-long prayers, and grand celebrations.
+            </p>
+        </div>
+
+        <!-- Map & How to Reach -->
+        <div class="info-card">
+            <h3><i class="fas fa-map-marked-alt"></i> How To Reach Raj Rajeshwar Temple</h3>
+            <p>
+                The temple is located centrally within the city, making it conveniently reachable within a short distance from the Akola Junction Railway Station and major local transit points.
+            </p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.452671512142!2d77.0028!3d20.7002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDQyJzAwLjciTiA3N8KwMDAnMTAuMSJF!5e0!3m2!1sen!2sin!4v1630818000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

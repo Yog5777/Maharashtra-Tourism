@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitabuldi Fort - Nagpur Tourism</title>
+    <!-- FontAwesome Library for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- Core Reset & Modern Base --- */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #f0f3f6;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* --- Color Palette --- */
+        :root {
+            --primary-color: #1a4d2e; /* Dark Green */
+            --accent-color: #4f772d;  /* Light Green */
+            --bg-light: #ffffff;
+            --text-muted: #555;
+        }
+
+        /* --- Main Title Header --- */
+        header {
+            background-color: #ffffff;
+            padding: 25px 10px 15px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        /* --- District Bar --- */
+        .sub-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .sub-header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .back-btn {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: absolute;
+            right: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #ffb703;
+            color: var(--primary-color);
+        }
+
+        /* --- Single Column Full-Width Wrapper --- */
+        .main-wrapper {
+            max-width: 1000px;
+            margin: 30px auto;
+            background: var(--bg-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .content-hero {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+            margin-bottom: 30px;
+        }
+
+        .content-hero img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Intro Box */
+        .intro-box {
+            background: #fafbfc;
+            padding: 22px 25px;
+            border-left: 5px solid var(--accent-color);
+            border-radius: 6px;
+            font-size: 16.5px;
+            color: #444;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .intro-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        /* Info Cards */
+        .info-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .info-card h3 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #f0f3f6;
+            padding-bottom: 8px;
+        }
+
+        .info-card h3 i {
+            color: var(--accent-color);
+        }
+
+        .info-card p, .info-card ul {
+            color: #555;
+            font-size: 15.5px;
+            text-align: justify;
+            margin-bottom: 12px;
+        }
+
+        .info-card ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+
+        .info-card ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        .info-card ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Map Container */
+        .map-container {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 380px;
+            border: 0;
+        }
+
+        /* Highlight Alert Box for Open Days */
+        .alert-box {
+            background-color: #e8f5e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-top: 10px;
+            color: #1b5e20;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-wrapper {
+                margin: 15px;
+                padding: 20px;
+            }
+            .sub-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .back-btn {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Title Header -->
+    <header>
+        <h1>WELCOME TO MAHARASHTRA TOURISM</h1>
+        <p>Explore the diverse beauty and culture of our state.</p>
+    </header>
+
+    <!-- Sub-Header / Destination Title Bar -->
+    <div class="sub-header">
+        <h2><i class="fas fa-fort-awesome"></i> Sitabuldi Fort, Nagpur</h2>
+        <a href="Nagpur.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Nagpur</a>
+    </div>
+
+    <!-- Main Container Layout -->
+    <div class="main-wrapper">
+        
+        <!-- Hero Image -->
+        <div class="content-hero">
+            <img src="../Asscet/Images/CQTdHDSlFyEU.jpg" alt="Sitabuldi Fort Nagpur">
+        </div>
+
+        <!-- Overview Section -->
+        <div class="intro-box">
+            <h3>About Sitabuldi Fort</h3>
+            <p>
+                Sitabuldi Fort is a historic hill fortress situated in the heart of Nagpur city, Maharashtra. Built on two hillocks — <i>Badi Tekri</i> (Big Hill) and <i>Choti Tekri</i> (Small Hill) — this mega-built fort played a pivotal role in the 3rd Anglo-Maratha War. It holds significant historical value in the evolution of trade, commerce, and defense of the Nagpur district.
+            </p>
+        </div>
+
+        <!-- Architecture Section -->
+        <div class="info-card">
+            <h3><i class="fas fa-archway"></i> Architecture</h3>
+            <p>
+                The initial foundation of Sitabuldi Fort was laid by the British East India Company in the 18th century and was later reconstructed by Mudhoji II Bhonsle. Built primarily of sandstone, granite, and laterite, the fort incorporates classic medieval defensive architecture featuring strong fortress walls, turrets for cannons, and strategic lookout gaps.
+            </p>
+            <p>
+                Inside the complex sits a two-storied elegant palace with long pillared corridors, spacious rooms, an Islamic-style mosque, and historical tombs commemorating fallen soldiers and Mysore Nawabs from the Anglo-Maratha wars.
+            </p>
+        </div>
+
+        <!-- History & Battles Section -->
+        <div class="info-card">
+            <h3><i class="fas fa-history"></i> History & Battle of Sitabuldi</h3>
+            <p>
+                The fort is most famous for the fierce <strong>Battle of Sitabuldi</strong> fought in November 1817 between the forces of Appa Saheb Bhonsle of Nagpur and the British East India Company. It witnessed crucial chapters of Indian history, including the imprisonment of Mahatma Gandhi during the freedom struggle.
+            </p>
+            <p>
+                Following the 1857 Indian Rebellion, Nawab Kadar Ali (grandson of Tipu Sultan) along with eight freedom fighters were executed on the ramparts of this fort. A historic mosque and memorials are maintained in their honor.
+            </p>
+        </div>
+
+        <!-- Current Status & Public Access Section -->
+        <div class="info-card">
+            <h3><i class="fas fa-shield-alt"></i> Current Status & Visitor Info</h3>
+            <p>
+                Sitabuldi Fort is currently home to the Indian Army's 118th Infantry Battalion (Territorial Army) Grenadiers. Maintained under strict Army administration as an eco-friendly zone, it remains one of the few forts continuously occupied and preserved since its construction.
+            </p>
+
+            <div class="alert-box">
+                <i class="fas fa-calendar-check"></i> <strong>Public Entry Notice:</strong> The fort is open to general public viewing on specific days of the year:
+                <ul style="margin-top: 8px;">
+                    <li><strong>26th January</strong> (Republic Day)</li>
+                    <li><strong>1st May</strong> (Maharashtra Day)</li>
+                    <li><strong>15th August</strong> (Independence Day)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Location & Map Section -->
+        <div class="info-card">
+            <h3><i class="fas fa-map-marked-alt"></i> Location & Map</h3>
+            <p>
+                Situated in central Sitabuldi, Nagpur, the fort is easily accessible from Nagpur Railway Station and Dr. Babasaheb Ambedkar International Airport.
+            </p>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14884.406190253798!2d79.0845165!3d21.1483567!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5301b15088e36de7!2sSitabuldi%20Fort%20Nagpur!5e0!3m2!1sen!2sin!4v1629889248819!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thane - Maharashtra Tourism</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Top Header */
+        header {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px 10px 10px 10px;
+        }
+
+        header h1 {
+            color: #1a4d2e;
+            font-size: 28px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        header p {
+            color: #666;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        /* District Banner Bar */
+        .district-bar {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 12px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .district-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .back-btn {
+            color: white;
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #ffb703;
+            color: #1a4d2e;
+        }
+
+        /* Single Main Container Card (Like Nagpur) */
+        .main-card {
+            max-width: 1100px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            display: flex;
+            overflow: hidden;
+        }
+
+        /* Dark Green Sidebar (Matches Nagpur Page) */
+        .sidebar {
+            width: 260px;
+            background-color: #1b4332;
+            padding: 20px 0;
+            flex-shrink: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #d8f3dc;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar ul li.active a, .sidebar ul li a:hover {
+            background-color: #2d6a4f;
+            color: #ffffff;
+        }
+
+        .sidebar ul li a i {
+            width: 18px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        /* Right Content Area */
+        .content-area {
+            flex: 1;
+            padding: 25px;
+        }
+
+        .image-box {
+            width: 100%;
+            height: 320px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .description-box {
+            border-left: 4px solid #2d6a4f;
+            padding-left: 15px;
+            font-size: 15px;
+            color: #444;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1b4332;
+            color: white;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>WELCOME TO MAHARASHTRA TOURISM</h1>
+        <p>Explore the diverse beauty and culture of our state.</p>
+    </header>
+
+    <!-- Green Bar -->
+    <div class="district-bar">
+        <div style="width: 100px;"></div> <!-- Spacer for center alignment -->
+        <div class="district-title">
+            <i class="fas fa-map-marker-alt"></i> Thane
+        </div>
+        <a href="Home.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <!-- Main Card Layout -->
+    <div class="main-card">
+        
+        <!-- Left Sidebar (Nagpur Style) -->
+        <div class="sidebar">
+            <ul>
+                <li class="active"><a href="#"><i class="fas fa-th-large"></i> OverView</a></li>
+                <li><a href="SanjayGandhiNationalPark.html"><i class="fas fa-tree"></i> Sanjay Gandhi Park</a></li>
+                <li><a href="Tikuji-ni-wadi.html"><i class="fas fa-child"></i> Tikuji-ni-wadi</a></li>
+                <li><a href="SurajWaterPark.html"><i class="fas fa-water"></i> Suraj Water Park</a></li>
+                <li><a href="UpvanLakefountain.html"><i class="fas fa-water"></i> Upvan Lake Fountain</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Content Section -->
+        <div class="content-area">
+            <div class="image-box">
+                <img src="../Asscet/Images/Mumbai.jpg" alt="Thane City Banner" onerror="this.src='https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=1000&auto=format&fit=crop'">
+            </div>
+            
+            <div class="description-box">
+                <p>
+                    Thane is a city just outside Mumbai, in the western Indian state of Maharashtra. Known as the "City of Lakes," it features more than 30 lakes, including the tree-lined Upvan Lake, a popular recreational spot. Beside Talao Pali Lake, Kopineshwar Mandir is an old, domed Hindu temple dedicated to Lord Shiva. To the west, leopards, monkeys, and parakeets inhabit the teak forest and bamboo groves of Sanjay Gandhi National Park.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Maharashtra Tourism Project | Thane</p>
+    </footer>
+
+</body>
+</html>

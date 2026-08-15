@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinhagad Fort, Pune - Maharashtra Tourism</title>
+    <!-- FontAwesome Library for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- Core Reset & Modern Base --- */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #f0f3f6;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* --- Color Palette --- */
+        :root {
+            --primary-color: #1a4d2e; /* Dark Green */
+            --accent-color: #4f772d;  /* Light Green */
+            --bg-light: #ffffff;
+            --text-muted: #555;
+        }
+
+        /* --- Main Title Header --- */
+        header {
+            background-color: #ffffff;
+            padding: 25px 10px 15px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        /* --- Sub-Header / Navigation Bar with 'Back to Pune' --- */
+        .sub-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .sub-header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .back-btn {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: absolute;
+            right: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #ffb703;
+            color: var(--primary-color);
+        }
+
+        /* --- Main Content Container --- */
+        .main-wrapper {
+            max-width: 950px;
+            margin: 30px auto;
+            background: var(--bg-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        /* Image Styling */
+        .park-img-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .park-img-container img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 30px;
+        }
+
+        .content-section h3 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-section p {
+            font-size: 15.5px;
+            color: #444;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        /* Grid Layouts */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .info-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 18px;
+            border-radius: 8px;
+        }
+
+        .info-card h4 {
+            color: var(--primary-color);
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            margin: 0;
+            color: #555;
+        }
+
+        /* Styled Lists */
+        ul.styled-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul.styled-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 15px;
+            color: #444;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        ul.styled-list li i {
+            color: var(--accent-color);
+            margin-top: 4px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-wrapper {
+                margin: 15px;
+                padding: 20px;
+            }
+            .sub-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .back-btn {
+                position: static;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Title Header -->
+    <header>
+        <h1>WELCOME TO MAHARASHTRA TOURISM</h1>
+        <p>Explore the diverse beauty and culture of our state.</p>
+    </header>
+
+    <!-- Sub-Header / Navigation Bar with 'Back to Pune' link -->
+    <div class="sub-header">
+        <h2><i class="fas fa-shield-alt"></i> Sinhagad Fort, Pune</h2>
+        <a href="Pune.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Pune</a>
+    </div>
+
+    <!-- Main Container Layout -->
+    <div class="main-wrapper">
+        
+        <!-- Fort Image -->
+        <div class="park-img-container">
+            <img src="../Asscet/Images/Sinhagad Fort, Pune.jpg" alt="Sinhagad Fort">
+        </div>
+
+        <!-- About Section -->
+        <div class="content-section">
+            <h3><i class="fas fa-info-circle"></i> About Sinhagad Fort</h3>
+            <p>Sinhagad (Lion's Fort) is a historic hill fortress located about 35 km southwest of Pune, India. Perched on an isolated cliff of the Bhuleswar range in the Sahyadri Mountains, it stands roughly 760 meters above ground and 1,312 meters above mean sea level.</p>
+            <p>Originally known as <strong>Kondhana</strong>, archaeological clues like ancient caves and carvings in the Kaundinyeshwar temple suggest parts of the site could be up to 2,000 years old.</p>
+        </div>
+
+        <!-- Architecture & Strategic Layout Grid -->
+        <div class="content-section">
+            <h3><i class="fas fa-chess-rook"></i> Strategic Design & Architecture</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4><i class="fas fa-mountain"></i> Natural Defenses</h4>
+                    <p>Strategically built with very steep slopes for natural protection, featuring walls and bastions positioned only at key access points.</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-door-open"></i> Fort Gates</h4>
+                    <p>Features two primary entry points: the <strong>Kalyan Darwaza</strong> to the southeast and the <strong>Pune Darwaza</strong> to the northeast.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Legendary Battle of Sinhagad -->
+        <div class="content-section">
+            <h3><i class="fas fa-fire-alt"></i> The Legendary Battle of Sinhagad (1670)</h3>
+            <p>One of the most glorious chapters in the fort's history occurred in March 1670 when Chhatrapati Shivaji Maharaj's trusted military general, <strong>Tanaji Malusare</strong>, recaptured the fort from the Mughal forces.</p>
+            <ul class="styled-list">
+                <li><i class="fas fa-hiking"></i> <strong>The Midnight Scale:</strong> Tanaji and his men stealthily scaled a steep, sheer cliff at night using a tamed monitor lizard locally known as a <i>Ghorpad</i> (Yashwant).</li>
+                <li><i class="fas fa-khanda"></i> <strong>Fierce Combat:</strong> A brutal battle ensued against the Mughal garrison headed by Rajput Sardar Udaybhan Singh Rathod. Tanaji lost his life in the clash, after which his brother Suryaji took command and successfully secured the fort.</li>
+                <li><i class="fas fa-comment-dots"></i> <strong>"Gad Ala, Pan Sinha Gela":</strong> Deeply grieved upon hearing of Tanaji's supreme sacrifice, Shivaji Maharaj famously remarked, "The fort is conquered, but the lion was lost," leading to the fort's renaming to <strong>Sinhagad</strong>.</li>
+            </ul>
+        </div>
+
+        <!-- Historical Evolution -->
+        <div class="content-section">
+            <h3><i class="fas fa-history"></i> Timeline & Historical Shifts</h3>
+            <p>Over centuries, Kondhana/Sinhagad changed hands multiple times among the Koli kings, Bahmanis, Adil Shahis, Mughals, and the Maratha Empire. It served as a vital administrative and strategic anchor alongside neighboring forts like Rajgad, Purandar, and Torna. Notably, Peshwa ruler Rajaram I passed away inside the fort on March 3, 1700 AD. The Maratha rule persisted until the British captured it in 1818.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

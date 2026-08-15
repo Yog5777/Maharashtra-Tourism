@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wadali Talav - Maharashtra Tourism</title>
+    <!-- FontAwesome Library for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* --- Core Reset & Modern Base --- */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #f0f3f6;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* --- Color Palette --- */
+        :root {
+            --primary-color: #1a4d2e; /* Dark Green */
+            --accent-color: #4f772d;  /* Light Green */
+            --bg-light: #ffffff;
+            --text-muted: #555;
+        }
+
+        /* --- Main Title Header --- */
+        header {
+            background-color: #ffffff;
+            padding: 25px 10px 15px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        /* --- Sub-Header / Navigation Bar with 'Back to Amravati' --- */
+        .sub-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .sub-header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .back-btn {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: absolute;
+            right: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #ffb703;
+            color: var(--primary-color);
+        }
+
+        /* --- Main Content Container --- */
+        .main-wrapper {
+            max-width: 950px;
+            margin: 30px auto;
+            background: var(--bg-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        /* Image Styling */
+        .park-img-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .park-img-container img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 30px;
+        }
+
+        .content-section h3 {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-section p {
+            font-size: 15.5px;
+            color: #444;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        /* Grid Layouts */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .info-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 18px;
+            border-radius: 8px;
+        }
+
+        .info-card h4 {
+            color: var(--primary-color);
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            margin: 0;
+            color: #555;
+        }
+
+        /* Styled Lists */
+        ul.styled-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul.styled-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 15px;
+            color: #444;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        ul.styled-list li i {
+            color: var(--accent-color);
+            margin-top: 4px;
+        }
+
+        /* Map Container */
+        .map-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-wrapper {
+                margin: 15px;
+                padding: 20px;
+            }
+            .sub-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .back-btn {
+                position: static;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Title Header -->
+    <header>
+        <h1>WELCOME TO MAHARASHTRA TOURISM</h1>
+        <p>Explore the diverse beauty and culture of our state.</p>
+    </header>
+
+    <!-- Sub-Header / Title Bar with 'Back to Amravati' -->
+    <div class="sub-header">
+        <h2><i class="fas fa-water"></i> Wadali Talav, Amravati</h2>
+        <a href="Amravati.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Amravati</a>
+    </div>
+
+    <!-- Main Container Layout -->
+    <div class="main-wrapper">
+        
+        <!-- Lake Image -->
+        <div class="park-img-container">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Wadali Talav">
+        </div>
+
+        <!-- About Section -->
+        <div class="content-section">
+            <h3><i class="fas fa-info-circle"></i> About Wadali Talao</h3>
+            <p>Tucked amidst mesmerizing nature, Wadali Talao is a popular reservoir sprawled on Chandur Railway Road in Amravati. Originally built to supply fresh water to city residents, it now serves as a refreshing getaway offering a peaceful environment set away from the city's hustle and bustle.</p>
+            <p>Located just 3 km away from the city center, it is an ideal picnic spot for families and friends, easily accessible via local transport.</p>
+        </div>
+
+        <!-- Attractions & Activities Grid -->
+        <div class="content-section">
+            <h3><i class="fas fa-star"></i> What Wadali Lake is Famous For</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4><i class="fas fa-ship"></i> Boating & Water Sports</h4>
+                    <p>Delve into exhilarating pedal boat and motor boat experiences operated by trained professionals.</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-paw"></i> Nearby Zoo & Garden</h4>
+                    <p>Features a nearby zoo and garden offering kids' rides, horse riding, a toy train, and special 3D rides.</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-running"></i> Adventure Sports Area</h4>
+                    <p>Equipped with river crossing, high course plank walks, and balance-testing planks for young adventurers.</p>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-leaf"></i> Peaceful Ambiance</h4>
+                    <p>A favorite hotspot for nature lovers looking to relax and unwind in scenic surroundings.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visitor Information -->
+        <div class="content-section">
+            <h3><i class="fas fa-clock"></i> Visitor Information & Best Time</h3>
+            <ul class="styled-list">
+                <li><i class="fas fa-calendar-alt"></i> <strong>Best Season:</strong> July to February (Monsoon and Winters) when the reservoir is lush and the weather is pleasant.</li>
+                <li><i class="fas fa-hourglass-half"></i> <strong>Timings:</strong> Open on all days from 10:00 AM to 7:30 PM.</li>
+                <li><i class="fas fa-ticket-alt"></i> <strong>Entry Fee:</strong> INR 20 for adults and INR 10 for children (Special 3D ride is INR 30 per person).</li>
+            </ul>
+        </div>
+
+        <!-- Google Map Integration -->
+        <div class="map-container">
+            <h3 style="color: var(--primary-color); font-size: 18px; margin-bottom: 15px; text-align: left;"><i class="fas fa-map"></i> Location Map</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7453.381562227756!2d77.79111022483444!3d20.92475674421922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a463739ab067%3A0x513976bbc405c18b!2sWadali%20Talav!5e0!3m2!1sen!2sin!4v1630814228858!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>
