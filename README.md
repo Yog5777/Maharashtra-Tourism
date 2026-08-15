@@ -5,7 +5,7 @@ A modern, responsive frontend web project designed to showcase the rich culture,
 ---
 
 ## 📸 Website Preview
-*(यहां अपने स्क्रीनशॉट का सही पाथ दें, जो आपने screenshot फोल्डर में रखा है)*
+
 ![Home Page Screenshot](Asscet/Screenshot/Home%20page.png)
 
 ---
